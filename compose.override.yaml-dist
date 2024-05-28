@@ -1,0 +1,15 @@
+# copy this file as compose.override.yaml
+services:
+  php:
+    volumes:
+      - ./:/app
+      - ${HOME}/.composer:/.composer
+      ### required for grumphp
+      - ./.git:/app/.git
+
+  web:
+    volumes:
+      - ./public/:/app/public
+      - ./.image/development/nginx/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 8080:80

@@ -1,0 +1,13 @@
+**/*.*
+!.image
+!bin
+!config
+!public
+!src
+!tests
+!composer.*
+!grumphp.yml
+!phpcs.xml
+!phpstan.neon
+!phpunit.xml
+!symfony.lock

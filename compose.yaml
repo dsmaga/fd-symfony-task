@@ -1,0 +1,11 @@
+services:
+  php:
+    build:
+      context: "."
+      target: runtime-local
+
+  web:
+    image: nginx:latest
+    depends_on:
+      php:
+        condition: service_started

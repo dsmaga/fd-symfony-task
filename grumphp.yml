@@ -1,0 +1,11 @@
+grumphp:
+  git_hook_variables:
+    EXEC_GRUMPHP_COMMAND: 'docker compose run -T --rm --user 1000:1000 php'
+  ascii: ~
+  tasks:
+    phpstan: ~
+    phpcs:
+      standard: 'PSR12'
+    phpunit: ~
+    phpversion:
+      project: '8.3'
